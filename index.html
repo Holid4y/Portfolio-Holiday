@@ -5,39 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Linux Hollyday</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
-<body class="cantarell-regular">
+<body>
   <div id="console" class="console"></div>
   
   <div id="desktop" class="desktop" style="display: none;">
-    <nav class="top-nav">
-      <div class="time" id="currentTime1"></div>
-      <div class="icons">
-        <svg width="20" height="20"><use xlink:href="#network"/></svg>
-        <svg width="28" height="28"><use xlink:href="#volume"/></svg>
-        <svg width="20" height="20"><use xlink:href="#power"/></svg>
-      </div>
+    <nav class="top-nav" style="background-color: #212121;">
+        <div class="app"><div class="btn app_btn1"></div><div class="btn app_btn2"></div></div>
+        <div class="time app"></div>
+        <div class="icons app">
+            <svg width="20" height="20" style="cursor: pointer;"><use xlink:href="#network"/></svg>
+            <svg width="28" height="28" style="cursor: pointer;"><use xlink:href="#volume"/></svg>
+            <svg width="20" height="20" style="cursor: pointer;"><use xlink:href="#power"/></svg>
+        </div>
     </nav>
     <div class="content">
       <div class="blue-block">
-        <div class="image"><img src="media/img/prof.png" alt=""></div>
+        <div class="image"><img src="media/img/logo.jpg" alt=""></div>
         <div class="text"><h2>Hollyday</h2></div>
-        
+        <div class="btn_login"><svg width="40" height="40"><use xlink:href="#right_arrow"/></svg></div>
       </div>
-      <p style="color:#fff">Нажми Enter чтобы продолжить</p>
+      <p style="color:#fff">Нажмите Enter или кнопку войти</p>
     </div>
   </div>
 
   <div id="work" class="work" style="display: none;">
     <nav class="top-nav" style="background-color: #212121;">
-        <div class="time" id="currentTime2"></div>
-        <div class="icons">
-            <svg id="networkIcon" width="20" height="20" onclick="checkInternetConnection()" style="cursor: pointer;"><use xlink:href="#network"/></svg>
-            <svg width="28" height="28"><use xlink:href="#volume"/></svg>
-            <svg width="20" height="20"><use xlink:href="#power"/></svg>
+        <div class="app"><div class="btn app_btn1"></div><div class="btn app_btn2"></div></div>
+        <div class="time app"></div>
+        <div class="icons app">
+            <svg id="networkIcon" width="20" height="20" style="cursor: pointer;"><use xlink:href="#network"/></svg>
+            <svg width="28" height="28" style="cursor: pointer;"><use xlink:href="#volume"/></svg>
+            <svg width="20" height="20" style="cursor: pointer;"><use xlink:href="#power"/></svg>
         </div>
     </nav>
     <div id="console_app" class="window_app" style="display: none;">
@@ -57,7 +56,25 @@
             <button data-window="aboutme"><svg width="20" height="20"><use xlink:href="#exit"/></svg></button>
         </div>
         <div class="content_console_app">
-            <p>Меня зовут Олег, мой ник в сети Hollyday. Мне 22 года. Занимаюсь Web программированием. </p>
+            <div id="output_aboutme" style="overflow-y: auto; max-height: 370px; white-space: pre-wrap;"><h2>Привет, меня зовут Олег!</h2>Я - начинающий веб-разработчик. Также увлекаюсь электроникой и компьютерами. Мне 21 год, и я стремлюсь к профессиональному росту в сфере технологий.
+
+<b>Мои навыки:</b>
+  Языки программирования: 
+      Я владею <u>Python</u>, <u>HTML</u>, <u>CSS</u> и <u>JavaScript</u>. Python - мой основной язык программирования, HTML, CSS и JavaScript помогают мне создавать интерактивные и красивые веб-приложения.
+  Фреймворки: 
+      Я работал с фреймворками <u>Bootstrap</u> и <u>Django</u>. Bootstrap помогает мне быстро создавать адаптивные и стильные веб-интерфейсы, а Django - эффективный инструмент для разработки веб-приложений на Python с учетом MVC-архитектуры.
+
+<b>Мой опыт:</b>
+  Имею опыт в разработке различных проектов, включая веб-приложения и программы. 
+  Мой недавний проект включал создание веб-приложения для управления задачами с использованием Django в качестве backend и HTML/CSS/JavaScript для frontend.
+
+<b>Что я ищу:</b>
+  Я стремлюсь к тому, чтобы применять свои знания и навыки в реальных проектах, где я могу продолжать учиться и развиваться. 
+  Меня интересует возможность работать в команде единомышленников, где я смогу внести свой вклад и расти профессионально.
+
+<b>Контакты:</b>
+  Если у вас есть интересные предложения или вы хотите связаться со мной, не стесняйтесь написать мне в <a href="https://t.me/H0llyday" target="_blank">Telegram</a>.
+            </div>
         </div>
     </div>
     
@@ -66,8 +83,22 @@
             <p>Мои проекты</p>
             <button data-window="projects"><svg width="20" height="20"><use xlink:href="#exit"/></svg></button>
         </div>
-        <div class="content_console_app">
-            
+        <div class="content_console_app" style="overflow-y: auto; max-height: 370px;">
+            <div class="card">
+                <img src="/media/project/1.png" alt="">
+                <div class="desc">Web-приложение Todo</div>
+                <a href="#"></a><div class="link"><p>Перейти</p></div></a>
+            </div>
+            <div class="card">
+                <img src="/media/project/1.png" alt="">
+                <div class="desc">Web-приложение Todo</div>
+                <a href="#"></a><div class="link"><p>Перейти</p></div></a>
+            </div>
+            <div class="card">
+                <img src="/media/project/1.png" alt="">
+                <div class="desc">Web-приложq weeeeение Todo qweqw qwe </div>
+                <a href="#"></a><div class="link"><p>Перейти</p></div></a>
+            </div>
         </div>
     </div>
     
@@ -94,20 +125,20 @@
       
       <symbol id="power" viewBox="0 0 16 16"><path d="M7.5 1v7h1V1z"/><path d="M3 8.812a5 5 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812"/></symbol>
 
-      <symbol id="aboutmeicon" viewBox="0 0 16 16">
-        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/></symbol>
+      <symbol id="aboutmeicon" viewBox="0 0 16 16"><path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/></symbol>
       
-      <symbol id="backpack" viewBox="0 0 16 16">
-        <path d="M8 0a2 2 0 0 0-2 2H3.5a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h4v.5a.5.5 0 0 0 1 0V7h4a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H10a2 2 0 0 0-2-2m1 2a1 1 0 0 0-2 0zm-4 9v2h6v-2h-1v.5a.5.5 0 0 1-1 0V11z"/>
-        <path d="M14 7.599A3 3 0 0 1 12.5 8H9.415a1.5 1.5 0 0 1-2.83 0H3.5A3 3 0 0 1 2 7.599V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5z"/></symbol>
+      <symbol id="backpack" viewBox="0 0 16 16"><path d="M8 0a2 2 0 0 0-2 2H3.5a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h4v.5a.5.5 0 0 0 1 0V7h4a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H10a2 2 0 0 0-2-2m1 2a1 1 0 0 0-2 0zm-4 9v2h6v-2h-1v.5a.5.5 0 0 1-1 0V11z"/><path d="M14 7.599A3 3 0 0 1 12.5 8H9.415a1.5 1.5 0 0 1-2.83 0H3.5A3 3 0 0 1 2 7.599V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5z"/></symbol>
       
-      <symbol id="telegram" viewBox="0 0 16 16">
-        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/></symbol>
+      <symbol id="telegram" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/></symbol>
       
       <symbol id="git" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></symbol>
       
       <symbol id="phone" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/></symbol>
-  </svg>
+      
+      <symbol id="right_arrow" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/></symbol>
+  
+      
+    </svg>
   <script src="js/nav.js"></script>
   <script src="js/time.js"></script>
   <script src="js/script.js"></script>

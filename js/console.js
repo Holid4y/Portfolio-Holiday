@@ -41,13 +41,11 @@ commandInput.addEventListener('keypress', function(e) {
 function handleCommand(command) {
 switch (command) {
     case 'help':
-        addConsoleMessage(`
-        - project
-        - git
-        - neofetch
-        - reboot
-        - clear
-        - sudo pacman -S "название пакета"`);
+        addConsoleMessage(`- project
+- git
+- neofetch
+- reboot
+- sudo pacman -S "название пакета"`);
         break;
     case 'project':
         addConsoleMessage('Рабочий проект: ...');

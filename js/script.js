@@ -59,14 +59,22 @@ document.addEventListener('DOMContentLoaded', function() {
   function showDesktop() {
     consoleDiv.style.display = 'none';
     desktopDiv.style.display = 'block';
-
+  
+    // Обработчик для нажатия на Enter
     document.addEventListener('keydown', function(event) {
       if (event.key === 'Enter') {
         desktopDiv.style.display = 'none';
         workDiv.style.display = 'block';
       }
     });
+  
+    var rightArrowButton = document.querySelector('.blue-block svg');
+  
+    rightArrowButton.addEventListener('click', function() {
+      desktopDiv.style.display = 'none';
+      workDiv.style.display = 'block';
+    });
   }
-
+  
   simulateBoot();
 });

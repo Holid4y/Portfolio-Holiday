@@ -5,6 +5,7 @@ const gitButton = document.getElementById('gitButton');
 const phoneButton = document.getElementById('phoneButton');
 const AboutMe = document.getElementById('aboutme');
 const Projects = document.getElementById('projects');
+const outputAboutMe = document.getElementById('output_aboutme');
 
 aboutButton.addEventListener('click', function() {
     openAboutMe();
@@ -22,11 +23,12 @@ phoneButton.addEventListener('click', function() {
     window.location.href = 'tel:89304088365';
 });
 
-function openAboutMe() {
-    AboutMe.style.display = 'block';
-}
+
 function openProjects() {
-    Projects.style.display = 'block';
+  Projects.style.display = 'block';
+}
+function openAboutMe() {
+  AboutMe.style.display = 'block';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -61,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const maxX = window.innerWidth - currentWindow.offsetWidth;
         const maxY = window.innerHeight - currentWindow.offsetHeight;
         const boundedX = Math.min(Math.max(0, newX), maxX);
-        const boundedY = Math.min(Math.max(0, newY), maxY - 45);
+        const boundedY = Math.min(Math.max(38, newY), maxY - 90);
   
         currentWindow.style.left = boundedX + 'px';
         currentWindow.style.top = boundedY + 'px';
@@ -82,12 +84,15 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('mouseup', stopDragging);
     document.addEventListener('mousemove', drag);
   
-    // Закрытие окна при клике на кнопку закрытия
+    // Закрытие окна и сбрасывание позиционирования 
     document.querySelectorAll('.window_app button').forEach(function(btn) {
       btn.addEventListener('click', function() {
         const windowId = btn.getAttribute('data-window');
-        document.getElementById(windowId).style.display = 'none';
+        const windowElement = document.getElementById(windowId);
+        windowElement.style.display = 'none';
+
+        windowElement.style.top = '';
+        windowElement.style.left = '';
       });
     });
-  });
-  
+});
