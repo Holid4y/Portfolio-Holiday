@@ -3,10 +3,16 @@ const backpackButton = document.getElementById('backpackButton');
 const telegramButton = document.getElementById('telegramButton');
 const gitButton = document.getElementById('gitButton');
 const phoneButton = document.getElementById('phoneButton');
+const googleButton = document.getElementById('googleButton');
+const google = document.getElementById('google');
 const AboutMe = document.getElementById('aboutme');
 const Projects = document.getElementById('projects');
 const outputAboutMe = document.getElementById('output_aboutme');
 
+
+googleButton.addEventListener('click', function() {
+  openGoogle();
+});
 aboutButton.addEventListener('click', function() {
     openAboutMe();
 });
@@ -14,16 +20,18 @@ backpackButton.addEventListener('click', function() {
     openProjects();
 });
 telegramButton.addEventListener('click', function() {
-    window.open('https://t.me/H0llyday', '_blank');
+    window.open('https://t.me/H0LID4Y', '_blank');
 });
 gitButton.addEventListener('click', function() {
-    window.open('https://github.com/JenkaPyhka', '_blank');
+    window.open('https://github.com/Holid4y', '_blank');
 });
 phoneButton.addEventListener('click', function() {
     window.location.href = 'tel:89304088365';
 });
 
-
+function openGoogle() {
+  google.style.display = 'block';
+}
 function openProjects() {
   Projects.style.display = 'block';
 }

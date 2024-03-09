@@ -64,8 +64,8 @@ switch (command) {
                   .o+                    -----------------
                   ooo/                   OS: Arch Linux x86_64
                  +oooo:                  Kernel: 6.7.6-arch1-2
-                +oooooo:                 Telegram: https://t.me/H0llyday
-               -+oooooo+:                Git: https://github.com/JenkaPyhka
+                +oooooo:                 Telegram: https://t.me/H0LID4Y
+               -+oooooo+:                Git: https://github.com/Holid4y
               /:-:++oooo+:               Shell: bash 5.2.26
              /++++/+++++++:              Resolution: 1280x1024, 1920x1080
             /++++++++++++++:             DE: GNOME 45.4

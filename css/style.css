@@ -153,7 +153,10 @@ body {
   display: flex;
   align-items: center;}
 .nav_console_app p { margin-right: auto; }
-.content_console_app{ padding: 10px 5px; }
+.content_console_app{
+  padding: 10px 15px;
+
+}
 #commandInput{
   background-color: #1e1e1e;
   color: #a0a0a0;
@@ -196,14 +199,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;}
-.nav-bottom ul li svg {
+.nav-bottom ul li img {
   width: 100%;
-  height: auto;}
-.nav-bottom ul li svg{
-  fill: #fff;
-  transition: fill 0.3s;}
-.nav-bottom ul li svg:hover{
-  fill: #5662f6;}
+  height: auto;
+  transition: transform 0.3s;}
+.nav-bottom ul li img:hover{
+  transform: scale(1.2);}
 
 b{
   color: #ff6c6c;
@@ -216,18 +217,29 @@ h2{
   margin-bottom: 10px;
 }
 
-.card{
+.card {
   display: inline-block;
-  width: 46%;
   border: #2e2e2e solid 1px;
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 10px;
 }
 
-.card img{
+.card img {
   border-radius: 10px;
   width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: 45%;
+  }
 }
 
 .desc{
